@@ -21,7 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
             "go_to_pose = ponderada.go_to_pose:main",
-            "set_initial_pose = ponderada.set_initial_pose:main"
+            "set_initial_pose = ponderada.initial_pose:main"    
         ],
     },
 )
