@@ -40,4 +40,5 @@ ros2 run nav2_map_server map_saver_cli -f <nome-do-mapa>
 ros2 launch ponderada navigation_launch.py
 ```
 Com esse launch o robô vai procurar o melhor caminho utilizando o alvo dado no nó go_to_pose
+
 [Navegação](https://youtu.be/WqxoV84tRCY)
