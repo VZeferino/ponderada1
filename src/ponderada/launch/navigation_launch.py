@@ -16,18 +16,18 @@ def generate_launch_description():
          '/turtlebot3_world.launch.py'])
          )
    navigator_ros2 = ExecuteProcess(
-            cmd=['ros2', 'launch', 'turtlebot3_navigation2', 'navigation2.launch.py', 'use_sim_time:=True', 'map:=my-map.yaml'],
-            name='navigator_ros2',
+            cmd=['ros2', 'launch', 'turtlebot3_navigation2', 'navigation2.launch.py', 'use_sim_time:=True', 'map:=map.yaml'],
+            name='navigator',
             output='screen'
         )
    initial_pose = ExecuteProcess(
-            cmd=['ros2', 'run', 'ros2_entregavel01', 'set_initial_pose'],
-            name='initial_pose_nav2',
+            cmd=['ros2', 'run', 'ponderada', 'initial_pose'],
+            name='initial_pose',
             output='screen'
         )
-   go_to_location = ExecuteProcess(
-            cmd=['ros2', 'run', 'ros2_entregavel01', 'go_to_pose'],
-            name='go_to_pose_nav2',
+   go_to_pose = ExecuteProcess(
+            cmd=['ros2', 'run', 'ponderada', 'go_to_pose'],
+            name='go_to_pose',
             output='screen'
         )
 
@@ -35,7 +35,7 @@ def generate_launch_description():
       gazebo_world,
       navigator_ros2,
       initial_pose,
-      go_to_location
+      go_to_pose
    ])
 
 if __name__ == "__main__":

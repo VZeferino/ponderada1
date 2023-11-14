@@ -3,7 +3,6 @@ import rclpy
 from nav2_simple_commander.robot_navigator import BasicNavigator
 from geometry_msgs.msg import PoseStamped
 from tf_transformations import quaternion_from_euler
-
 from math import pi
 
 def pose(pose_x, pose_y, pose_z):
@@ -30,10 +29,8 @@ def pose(pose_x, pose_y, pose_z):
 
 
 def main():
-    pose(3.0, 3.0, 0.0)
-    pose(2.0, 0.0, 0.0)
     pose(1.0, 3.0, 0.0)
-    pose(0.0, 0.0, 0.0)
+    pose(2.0, 0.0, 0.0)
 
 if __name__ == "__main__":
     main()
